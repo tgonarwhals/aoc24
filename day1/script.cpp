@@ -68,6 +68,6 @@ int main()
 		std::cout << list1v[i] << " " << list2v[i] << std::endl;
 	}*/
 
-	cout << score << "!" << endl;
+	std::cout << score << "!" << std::endl;
 	return 0;
 }
