@@ -40,15 +40,34 @@ int main()
 	sort (list1v.begin(), list1v.end());
 	sort (list2v.begin(), list2v.end());
 
+	/*
+	
+	PART ONE ---------
+
 	int sum = 0;
 	for (i = 0; i < 1000; i++) {
 		int dist = abs(list1v[i] - list2v[i]);
 		sum += dist;
 	}
+	
+	PART ONE ---------
 
-	for (i = 0; i < 1000; i++){
-		std::cout << list1v[i] << " " << list2v[i] << std::endl;
+	*/
+	int score = 0;
+	for (i = 0; i < 1000; i++) {
+		int count = 0;
+		for (int j = 0; j < 1000; j++) {
+			if (list1v[i] == list2v[j]) {
+				count++;
+			}
+		}
+		score += list1v[i] * count;
 	}
-	cout << sum << "!" << endl;
+
+	/*for (i = 0; i < 1000; i++){
+		std::cout << list1v[i] << " " << list2v[i] << std::endl;
+	}*/
+
+	cout << score << "!" << endl;
 	return 0;
 }
